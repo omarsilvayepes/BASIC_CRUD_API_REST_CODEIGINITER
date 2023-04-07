@@ -38,6 +38,15 @@ class Validation extends BaseConfig
         'single' => 'CodeIgniter\Validation\Views\single',
     ];
 
+
+    // Add Here the validations model
+
+    public $beerValidation = [
+        'brand'   => 'required|alpha_space|min_length[3]|max_lenght[75]',
+        'price' => 'required',
+        'alcohol' => 'required'
+    ];
+
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------

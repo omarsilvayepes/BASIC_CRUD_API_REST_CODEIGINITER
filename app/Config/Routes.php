@@ -49,4 +49,8 @@ if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
 }
 
 $routes->get('getBeers', 'BeerController::index');
+$routes->get('getBeer/(:num)', 'BeerController::getBeerById/$1');
+$routes->post('createBeer', 'BeerController::createBeer');
+$routes->put('updateBeer/(:num)', 'BeerController::updateBeer/$1');
+$routes->delete('deleteBeer/(:num)', 'BeerController::deleteBeer/$1');
 //$routes->resource('getBeers',['controller'=>'BeerController']);
